@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="/assets/agentics-symbol-400x400.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agentics | L'Ère de l'Entreprise Autonome à Lyon</title>
+    <meta name="description"
+        content="Agentics bâtit des systèmes multi-agents sécurisés pour automatiser vos processus critiques en Logistique et Pharma. Expertise en LangGraph et n8n.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body class="industrial-grid antialiased">
+    <!-- Header will be injected here -->
+    <div id="header-container"></div>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="relative overflow-hidden pt-32 pb-20 lg:pt-48 lg:pb-32">
+            <div class="container mx-auto px-6 relative z-10">
+                <div class="max-w-4xl">
+                    <div
+                        class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-agentics-blue/10 border border-agentics-blue/20 mb-6">
+                        <span class="relative flex h-2 w-2">
+                            <span
+                                class="animate-ping absolute inline-flex h-full w-full rounded-full bg-agentics-blue opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-2 w-2 bg-agentics-blue"></span>
+                        </span>
+                        <span class="text-agentics-blue text-sm font-semibold uppercase tracking-wider">Basé à
+                            Lyon</span>
+                    </div>
+                    <h1 class="text-5xl md:text-7xl font-display font-bold leading-tight mb-8">
+                        L’Ère de l’Entreprise <br />
+                        <span class="gradient-text tracking-tight">Autonome à Lyon.</span>
+                    </h1>
+                    <p class="text-xl md:text-2xl text-slate-600 mb-10 max-w-2xl leading-relaxed">
+                        Nous bâtissons des systèmes multi-agents sécurisés pour automatiser vos processus critiques en
+                        Logistique et Industrie Pharmaceutique.
+                    </p>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                        <a href="#diagnostic" class="btn-primary text-lg">
+                            Commencer par un Diagnostic Gateway
+                        </a>
+                        <a href="#expertise" class="btn-outline text-lg">
+                            Découvrir notre Expertise
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Abstract background element -->
+            <div
+                class="absolute top-0 right-0 -z-10 w-1/2 h-full bg-gradient-to-l from-agentics-blue/5 to-transparent pointer-events-none">
+            </div>
+            <div
+                class="absolute top-1/2 right-0 -translate-y-1/2 -z-20 w-[600px] h-[600px] bg-agentics-blue/5 blur-3xl rounded-full">
+            </div>
+        </section>
+
+        <!-- The Problem: Contrast Section -->
+        <section id="problem" class="py-24 bg-slate-900 text-white overflow-hidden">
+            <div class="container mx-auto px-6">
+                <div class="grid lg:grid-cols-2 gap-16 items-center">
+                    <div>
+                        <h2 class="text-4xl font-display font-bold mb-8">Pourquoi les solutions d'IA classiques échouent
+                            en entreprise ?</h2>
+                        <p class="text-slate-400 text-lg mb-8 leading-relaxed">
+                            L'IA générique (SaaS) apporte souvent plus de doutes que de certitudes. Pour des processus
+                            critiques, l'approximation n'est pas une option.
+                        </p>
+
+                        <div class="space-y-6">
+                            <div class="flex items-start space-x-4">
+                                <div
+                                    class="w-12 h-12 rounded-xl bg-red-500/20 flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-6 h-6 text-red-500" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="text-xl font-bold mb-1">L’IA qui hallucine</h4>
+                                    <p class="text-slate-400">Résultats imprévisibles et risqués pour votre
+                                        exploitation.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-4 border-t border-slate-800 pt-6">
+                                <div
+                                    class="w-12 h-12 rounded-xl bg-agentics-green/20 flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-6 h-6 text-agentics-green" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="text-xl font-bold mb-1">Notre Architecture Rules-First</h4>
+                                    <p class="text-slate-400">Des agents déterministes, fiables et parfaitement intégrés
+                                        à vos workflows.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <div class="glass-card bg-slate-800/50 border-slate-700 relative z-10">
+                            <pre class="text-sm font-mono text-agentics-blue"><code>
+// Déterminisme Industriel
+const workflow = new StateGraph(AgentState)
+  .addNode("verifier", complianceNode)
+  .addNode("transformer", sdtmMappingNode)
+  .addEdge("verifier", "transformer")
+  .addConditionalEdge("transformer", checkQuality)
+                            </code></pre>
+                        </div>
+                        <div class="absolute -top-10 -right-10 w-64 h-64 bg-agentics-blue/20 blur-[100px] -z-0"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Expertise Section -->
+        <section id="expertise" class="py-24">
+            <div class="container mx-auto px-6">
+                <div class="text-center max-w-3xl mx-auto mb-20">
+                    <h2 class="section-title">Une expertise métier, <br />pas juste une maîtrise technologique.</h2>
+                    <p class="text-lg text-slate-600">Nous parlons votre langue. Nous comprenons vos contraintes
+                        opérationnelles et réglementaires.</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Logistics -->
+                    <div class="glass-card hover:border-agentics-blue/30 transition-colors group">
+                        <div
+                            class="w-16 h-16 rounded-2xl bg-agentics-blue/10 flex items-center justify-center mb-8 group-hover:bg-agentics-blue group-hover:text-white transition-colors duration-300">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0" />
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4">Logistique & Supply Chain</h3>
+                        <p class="text-slate-600 mb-6 italic">Dispatch, Facturation de fret, Optimisation de tournées.
+                        </p>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center text-slate-700">
+                                <svg class="w-5 h-5 text-agentics-green mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd"
+                                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                Traitement de fret : de 4.5 min à 1.5 min.
+                            </li>
+                            <li class="flex items-center text-slate-700">
+                                <svg class="w-5 h-5 text-agentics-green mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd"
+                                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                Zéro erreur de saisie sur les factures complexes.
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Pharma -->
+                    <div class="glass-card hover:border-agentics-blue/30 transition-colors group">
+                        <div
+                            class="w-16 h-16 rounded-2xl bg-agentics-red/10 flex items-center justify-center mb-8 group-hover:bg-agentics-red group-hover:text-white transition-colors duration-300">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517l-2.387-.477a2 2 0 00-1.022.547l-1.162 1.162a2 2 0 000 2.828l1.162 1.162a2 2 0 002.828 0l1.162-1.162a2 2 0 00.547-1.022l.477-2.387a6 6 0 01.517-3.86l.158-.318a6 6 0 00.517-3.86l-.477-2.387a2 2 0 00-.547-1.022l-1.162-1.162a2 2 0 00-2.828 0l-1.162 1.162a2 2 0 000 2.828l1.162 1.162z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4">Industrie Pharmaceutique</h3>
+                        <p class="text-slate-600 mb-6 italic">Conformité réglementaire, CDISC SDTM, Monitoring d'essais.
+                        </p>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center text-slate-700">
+                                <svg class="w-5 h-5 text-agentics-green mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd"
+                                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                Automatisation du mapping CDISC SDTM.
+                            </li>
+                            <li class="flex items-center text-slate-700">
+                                <svg class="w-5 h-5 text-agentics-green mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd"
+                                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                Tracking de conformité en temps réel.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Method Section -->
+        <section id="methode" class="py-24 bg-slate-50">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col lg:flex-row gap-16 items-center">
+                    <div class="lg:w-1/2">
+                        <h2 class="section-title">La Méthode Agentics</h2>
+                        <div class="space-y-12">
+                            <div class="relative pl-12">
+                                <span
+                                    class="absolute left-0 top-0 text-5xl font-display font-black text-agentics-blue/10">01</span>
+                                <h4 class="text-xl font-bold mb-3">Shadow Mode : Risque Zéro</h4>
+                                <p class="text-slate-600">Nos agents tournent en "Shadow Mode" : ils écoutent, analysent
+                                    et prédisent en parallèle de vos équipes. Une validation humaine totale avant toute
+                                    activation opérationnelle.</p>
+                            </div>
+                            <div class="relative pl-12">
+                                <span
+                                    class="absolute left-0 top-0 text-5xl font-display font-black text-agentics-blue/10">02</span>
+                                <h4 class="text-xl font-bold mb-3">Sprint de 90 jours</h4>
+                                <p class="text-slate-600">De l'audit à la mise en production. Nous itérons rapidement
+                                    avec des étapes claires et une activation progressive.</p>
+                            </div>
+                            <div
+                                class="relative pl-12 border-l-4 border-agentics-yellow/30 bg-agentics-yellow/5 p-6 rounded-r-2xl">
+                                <h4 class="text-xl font-bold mb-3">Kill Clause</h4>
+                                <p class="text-slate-600">Sécurité contractuelle : la clause de résiliation au 60ème
+                                    jour si les indicateurs de performance convenus ne sont pas atteints.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:w-1/2 relative">
+                        <div
+                            class="aspect-square bg-agentics-blue rounded-full absolute -top-10 -right-10 opacity-5 blur-3xl">
+                        </div>
+                        <img src="/assets/agentics-symbol-400x400.png" alt="Méthode Agentics"
+                            class="w-64 h-64 mx-auto animate-float relative z-10 filter drop-shadow-2xl">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- The Offer -->
+        <section id="diagnostic" class="py-24">
+            <div class="container mx-auto px-6">
+                <div class="max-w-4xl mx-auto glass-card bg-agentics-dark text-white p-12 relative overflow-hidden">
+                    <div class="relative z-10">
+                        <div
+                            class="inline-block px-4 py-1 rounded-full bg-agentics-blue/20 text-agentics-blue text-sm font-bold mb-6">
+                            OFFRE DE LANCEMENT</div>
+                        <h2 class="text-4xl font-display font-bold mb-6 italic">Le Diagnostic Gateway</h2>
+                        <p class="text-xl text-slate-300 mb-10">Une semaine pour cartographier vos workflows critiques
+                            et calculer votre ROI réel avant d'engager le moindre euro de développement.</p>
+
+                        <div class="grid md:grid-cols-2 gap-10 mb-10">
+                            <div class="space-y-4">
+                                <div class="flex items-center">
+                                    <svg class="w-5 h-5 text-agentics-green mr-3" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    Mapping complet des flux.
+                                </div>
+                                <div class="flex items-center">
+                                    <svg class="w-5 h-5 text-agentics-green mr-3" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    Détection des "AI-Gaps".
+                                </div>
+                            </div>
+                            <div class="flex flex-col justify-center">
+                                <div class="text-5xl font-display font-bold mb-1">2 000 €</div>
+                                <div class="text-slate-400 font-medium">Investissement unique</div>
+                            </div>
+                        </div>
+
+                        <button
+                            class="w-full sm:w-auto btn-primary bg-white text-agentics-dark hover:bg-slate-100 py-4 px-10 text-xl">
+                            Réserver mon Diagnostic
+                        </button>
+                    </div>
+                    <div class="absolute -bottom-20 -right-20 w-80 h-80 bg-agentics-blue/20 rounded-full blur-[100px]">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team -->
+        <section id="equipe" class="py-24">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title text-center mb-16">L'Expertise au service du Résultat.</h2>
+                <div class="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+                    <div class="text-center">
+                        <div
+                            class="w-32 h-32 rounded-full bg-slate-200 mx-auto mb-6 overflow-hidden grayscale hover:grayscale-0 transition-all duration-300">
+                            <!-- Placeholder or actual image -->
+                            <div
+                                class="w-full h-full flex items-center justify-center bg-agentics-blue/10 text-agentics-blue text-4xl font-bold">
+                                L</div>
+                        </div>
+                        <h4 class="text-xl font-bold">Laurent</h4>
+                        <p class="text-slate-500 font-medium mb-4 italic">Expert ML / LangGraph</p>
+                        <p class="text-slate-600 text-sm">Architecte de systèmes complexes, spécialisé dans le
+                            déploiement de modèles de langage déterministes.</p>
+                    </div>
+                    <div class="text-center">
+                        <div
+                            class="w-32 h-32 rounded-full bg-slate-200 mx-auto mb-6 overflow-hidden grayscale hover:grayscale-0 transition-all duration-300">
+                            <div
+                                class="w-full h-full flex items-center justify-center bg-agentics-green/10 text-agentics-green text-4xl font-bold">
+                                B</div>
+                        </div>
+                        <h4 class="text-xl font-bold">Jonathan</h4>
+                        <p class="text-slate-500 font-medium mb-4 italic">Expert Automation / n8n</p>
+                        <p class="text-slate-600 text-sm">Spécialiste de l'orchestration de flux et de l'intégration
+                            continue de processus métiers.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer will be injected here -->
+    <div id="footer-container"></div>
+
+    <script type="module" src="/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,105 @@
+apiVersion: traefik.io/v1alpha1
+kind: Middleware
+metadata:
+  name: redirect-www
+  namespace: agentics
+spec:
+  redirectRegex:
+    permanent: true
+    regex: ^https?://www\.agentics\.fr/(.*)
+    replacement: https://agentics.fr/${1}
+---
+apiVersion: traefik.io/v1alpha1
+kind: Middleware
+metadata:
+  name: redirect-https
+  namespace: agentics
+spec:
+  redirectScheme:
+    permanent: true
+    scheme: https
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: agentics-web
+  namespace: agentics
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: agentics-web
+  template:
+    metadata:
+      labels:
+        app: agentics-web
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:alpine
+        ports:
+        - containerPort: 80
+        volumeMounts:
+        - name: html
+          mountPath: /usr/share/nginx/html/index.html
+          subPath: index.html
+        - name: assets
+          mountPath: /usr/share/nginx/html/assets
+      volumes:
+      - name: html
+        configMap:
+          name: agentics-html
+      - name: assets
+        configMap:
+          name: agentics-assets
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: agentics-svc
+  namespace: agentics
+spec:
+  selector:
+    app: agentics-web
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 80
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: agentics-ingress
+  namespace: agentics
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-prod
+    traefik.ingress.kubernetes.io/router.entrypoints: web,websecure
+    traefik.ingress.kubernetes.io/router.middlewares: agentics-redirect-www@kubernetescrd,agentics-redirect-https@kubernetescrd
+spec:
+  ingressClassName: traefik
+  rules:
+  - host: agentics.fr
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: agentics-svc
+            port:
+              number: 80
+  - host: www.agentics.fr
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: agentics-svc
+            port:
+              number: 80
+  tls:
+  - hosts:
+    - agentics.fr
+    - www.agentics.fr
+    secretName: agentics-tls
