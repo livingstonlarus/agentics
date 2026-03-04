@@ -11,7 +11,7 @@ const elements = {
                 <a href="#expertise" class="text-sm font-semibold text-slate-600 hover:text-agentics-blue transition-colors">Expertise</a>
                 <a href="#methode" class="text-sm font-semibold text-slate-600 hover:text-agentics-blue transition-colors">Méthode</a>
                 <a href="#diagnostic" class="text-sm font-semibold text-slate-600 hover:text-agentics-blue transition-colors">Offre</a>
-                <a href="#diagnostic" class="btn-primary py-2 px-6 text-sm">Réserver un Audit</a>
+                <a href="https://calendar.app.google/ihbyqP2hC9C3mZZU7" target="_blank" class="btn-primary py-2 px-6 text-sm">Réserver un Audit</a>
             </div>
 
         </nav>
