@@ -38,7 +38,9 @@ const elements = {
                 <div>
                     <h5 class="text-white font-bold mb-6 italic uppercase tracking-widest text-sm">Contact</h5>
                     <p class="text-slate-400">Basé à Lyon</p>
-                    <p class="text-slate-400 mt-2">contact@agentics.fr</p>
+                    <p class="mt-2">
+                        <a id="em-lk" href="#" class="text-slate-400 hover:text-white transition-colors"></a>
+                    </p>
                 </div>
             </div>
             <div class="pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center text-slate-500 text-sm">
@@ -97,4 +99,12 @@ document.addEventListener('DOMContentLoaded', () => {
         el.classList.add('reveal-up');
         revealObserver.observe(el);
     });
+
+    // Email obfuscation
+    const emLk = document.getElementById('em-lk');
+    if (emLk) {
+        const decoded = atob("Y29udGFjdEBhZ2VudGljcy5mcg==");
+        emLk.href = "mailto:" + decoded;
+        emLk.textContent = decoded;
+    }
 });
