@@ -14,22 +14,7 @@ const elements = {
                 <a href="#diagnostic" class="btn-primary py-2 px-6 text-sm">Réserver un Audit</a>
             </div>
 
-            <!-- Mobile menu button -->
-            <button id="mobile-menu-btn" class="md:hidden text-slate-600 relative z-50 p-2 focus:outline-none">
-                <svg id="icon-menu" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
-                <svg id="icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
-            </button>
         </nav>
-        
-        <!-- Mobile Menu Overlay -->
-        <div id="mobile-menu" class="fixed inset-0 bg-white/95 backdrop-blur-md z-40 flex flex-col items-center justify-center opacity-0 invisible transition-all duration-300">
-            <div class="flex flex-col items-center space-y-8">
-                <a href="#expertise" class="mobile-link text-2xl font-bold text-slate-800 hover:text-agentics-blue">Expertise</a>
-                <a href="#methode" class="mobile-link text-2xl font-bold text-slate-800 hover:text-agentics-blue">Méthode</a>
-                <a href="#diagnostic" class="mobile-link text-2xl font-bold text-slate-800 hover:text-agentics-blue">Offre</a>
-                <a href="#diagnostic" class="mobile-link btn-primary py-3 px-8 text-xl mt-4">Réserver un Audit</a>
-            </div>
-        </div>
     </header>
   `,
     footer: `
@@ -89,42 +74,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Mobile Menu Toggle
-    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
-    const iconMenu = document.getElementById('icon-menu');
-    const iconClose = document.getElementById('icon-close');
-    const mobileLinks = document.querySelectorAll('.mobile-link');
-
-    if (mobileMenuBtn) {
-        mobileMenuBtn.addEventListener('click', () => {
-            const isClosed = mobileMenu.classList.contains('opacity-0');
-            if (isClosed) {
-                mobileMenu.classList.remove('opacity-0', 'invisible');
-                mobileMenu.classList.add('opacity-100', 'visible');
-                iconMenu.classList.add('hidden');
-                iconClose.classList.remove('hidden');
-                document.body.style.overflow = 'hidden'; // Prevent scrolling
-            } else {
-                mobileMenu.classList.add('opacity-0', 'invisible');
-                mobileMenu.classList.remove('opacity-100', 'visible');
-                iconMenu.classList.remove('hidden');
-                iconClose.classList.add('hidden');
-                document.body.style.overflow = '';
-            }
-        });
-
-        // Close menu on link click
-        mobileLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('opacity-0', 'invisible');
-                mobileMenu.classList.remove('opacity-100', 'visible');
-                iconMenu.classList.remove('hidden');
-                iconClose.classList.add('hidden');
-                document.body.style.overflow = '';
-            });
-        });
-    }
 
     // Intersection Observer for scroll animations
     const observerOptions = {
